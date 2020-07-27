@@ -27,16 +27,6 @@ public class Philosopher extends Thread
         return number;
     }
 
-    public Fork getLeftFork()
-    {
-        return leftFork;
-    }
-
-    public Fork getRightFork()
-    {
-        return rightFork;
-    }
-
     public PhilosopherEventHandler getPhilosopherEventHandler()
     {
         return philosopherEventHandler;
@@ -89,6 +79,16 @@ public class Philosopher extends Thread
             philosopherEventHandler.forkReleased(this, fork, direction);
         }
     }
+
+    /**
+     * Thread DEADLOCK'a dusmesini engellemek icin lock olusturuyoruz.
+     * Olusturulan run metodunda kullandigimiz synchronized:(kilit mekanizmasi) ile birlikte tek bir threadin buraya girmesini sagliyoruz.
+     * parametre olarak kilit olarak kullanilacak nesneyi yaziyoruz. (leftFork)
+     * Ayni anda sadece 1 threadin calismasini saglamak icin bu yapiyi kullaniyoruz boylelikle deadLock durumundan kurtulmus oluyoruz.
+     *
+     *      Yazdigimiz metod ile 2 filozof yemek yerken diger 3 filozof dusunecektir. Onlarda yemegini bitirdikten sonra dongu bu sekilde
+     *      devam edecektir.
+     */
 
     @Override
     public void run()

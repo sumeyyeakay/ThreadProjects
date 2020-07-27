@@ -2,7 +2,7 @@ package com.sumeyyeakay.diningPhilosophers;
 
 public class Fork {
 
-    //catal num
+    //catal numarasini dondurmek icin olusturuldu.
     private final int number;
 
     public Fork(int number)
