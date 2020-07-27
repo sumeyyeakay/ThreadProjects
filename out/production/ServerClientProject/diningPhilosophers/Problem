@@ -1,0 +1,18 @@
+yemek yemleri icin her 2 catalida eline almak zorunda
+bir filezof sag ve sooooooooolunda ki catali alinca yaninda ki kisi yemek yiyemiyor
+amacimiz herkesin catallarla yemek yiyebilmesi
+herkesin ayni anda 2 catal ile yemek yemesi lazim.
+
+
+    herkes solundakini alirsa deadlock a girecek.
+    sadece 1 kisiyi degistirceo kisi ilk sagina daha sonra soluna bakarak deadlock olmaa durumundan kurtarcaz
+    4 tanesi saga bakicak kalan 1 tanesi once sola daha sonra sola bakicak.
+
+    bu algoritmayi anladikran sonra kodlamaya gecicez
+
+
+
+
+
+
+    Dairesel algoritmalarda genellikle mode kullanilir
